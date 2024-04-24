@@ -82,6 +82,15 @@ export async function updateStack(
         StackName: params.StackName
       }
     )
+
+    // Describe ChangeSet
+    const describeChangeSetResult = await cfn.send(
+      new DescribeChangeSetCommand({
+        ChangeSetName: params.ChangeSetName,
+        StackName: params.StackName
+      })
+    )
+    console.log('ChangeSet Details:', describeChangeSetResult)
   } catch (err) {
     return cleanupChangeSet(
       cfn,
