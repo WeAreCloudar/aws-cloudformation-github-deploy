@@ -10,6 +10,7 @@ import {
   CreateChangeSetCommand,
   DescribeChangeSetCommand,
   DeleteChangeSetCommand,
+  DescribeChangeSetCommand,
   ExecuteChangeSetCommand,
   DescribeStacksCommand,
   CreateStackCommand
